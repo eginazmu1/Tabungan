@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabungan Bersama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div class="hero__title">
+          <div class="hero__label">🎯 Target Tabungan</div>
+          <h1 id="goal-title">Liburan Bali Rp 5.000.000</h1>
+        </div>
+        <div class="hero__progress">
+          <div class="hero__progress-info">
+            <span id="goal-progress-label">Progress Terkumpul</span>
+            <span id="goal-progress-value" class="hero__progress-value"></span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar__fill" id="goal-progress-bar"></div>
+          </div>
+        </div>
+        <div class="hero__week-card">
+          <div>
+            <h2>Target Minggu Ini</h2>
+            <p id="weekly-target-label">Rp 200.000</p>
+          </div>
+          <div class="status-pill" id="weekly-target-status">
+            <span class="status-pill__icon">❌</span>
+            <span class="status-pill__text">Belum</span>
+          </div>
+        </div>
+        <div class="notification" id="notification"></div>
+      </header>
+
+      <main class="main-grid">
+        <section class="user-cards" id="user-cards"></section>
+
+        <section class="history">
+          <div class="section-header">
+            <div>
+              <h2>Riwayat Minggu Ini</h2>
+              <p>Setoran terbaru untuk target rutin perminggu</p>
+            </div>
+            <div class="history__legend">
+              <span class="legend-item">
+                <span class="legend-dot legend-dot--a"></span> Egi
+              </span>
+              <span class="legend-item">
+                <span class="legend-dot legend-dot--b"></span> Partner
+              </span>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Nama</th>
+                  <th>Nominal</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="weekly-progress">
+          <div class="section-header">
+            <div>
+              <h2>Detail Progress Mingguan</h2>
+              <p>Performa 8 minggu terakhir</p>
+            </div>
+          </div>
+          <div class="chart" id="weekly-chart"></div>
+          <div class="streak" id="streak-message">
+            Sudah 3 minggu berturut-turut kompak ✅
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
